@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace FoodOrderingSystem.Core.Entities
 {
-    public class LemonCake : Cake
+    public class CarrotCake : Cake
     {
-        public string Name
+        public CarrotCake()
         {
-            get { return "Lemon Cake"; }
-        } 
+            Name = "Carrot Cake";
+        }
+
+
     }
 }

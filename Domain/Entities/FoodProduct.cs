@@ -42,5 +42,10 @@ namespace FoodOrderingSystem.Core.Entities
         {
             throw new NotImplementedException();
         }
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

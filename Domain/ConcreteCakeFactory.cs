@@ -11,9 +11,9 @@ namespace FoodOrderingSystem.Core
 {
     public class ConcreteCakeFactory : ICakeFactory
     {
-        private readonly ICakeTopingFactory _toppingFactory;
+        private readonly ICakeToppingFactory _toppingFactory;
 
-        public ConcreteCakeFactory(ICakeTopingFactory toppingFactory) 
+        public ConcreteCakeFactory(ICakeToppingFactory toppingFactory) 
         { 
             _toppingFactory = toppingFactory;
         }
@@ -25,14 +25,17 @@ namespace FoodOrderingSystem.Core
             switch (cake.Name.ToLower())
             {
                 case "lemon cake":
-                    newCake = new LemonCake();
+                    newCake = new LemonCake() { Ingredients = cake.Ingredients};
+                    break;
+                case "carrot cake":
+                    newCake = new CarrotCake() { Ingredients = cake.Ingredients };
                     break;
                 default:
                     throw new Exception();
             }
 
 
-            Ingredient toppingIngretient = _toppingFactory.AddCakeToping(topping);
+            Ingredient toppingIngretient = _toppingFactory.CreateTopping(topping);
 
             newCake.AddIngredient(toppingIngretient);
 

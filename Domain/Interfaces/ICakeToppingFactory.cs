@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace FoodOrderingSystem.Core.Interfaces
 {
-    public interface ICakeTopingFactory
+    public interface ICakeToppingFactory
     {
-        public Ingredient AddCakeToping(Enum.FoodTopping topping);
+        Ingredient CreateTopping(Enum.FoodTopping topping);
     }
 }

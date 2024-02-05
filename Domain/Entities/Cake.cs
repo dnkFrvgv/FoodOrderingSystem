@@ -11,5 +11,10 @@ namespace FoodOrderingSystem.Core.Entities
     public abstract class Cake : FoodProduct
     {
         public FoodCategoryEnum FoodType { get; set; } = FoodCategoryEnum.DESSERT;
+
+        public void AddTopping(Ingredient topping)
+        {
+            Name += $" with {topping.Name}";
+        }
     }
 }

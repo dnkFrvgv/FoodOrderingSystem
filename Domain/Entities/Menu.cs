@@ -19,9 +19,10 @@ namespace FoodOrderingSystem.Core.Entities
 
         public IEnumerable<MenuItem> GetAvailableItems(IEnumerable<MenuItem> menuItems)
         {
-            var AvailableItems = menuItems.Where(x => x.Product.IsIngredientsListAvailable).ToList();
+            throw new NotImplementedException();
+            /*var AvailableItems = menuItems.Where(x => x.Product.IsIngredientsListAvailable).ToList();
 
-            return AvailableItems;
+            return AvailableItems;/*/
         }
 
         public IEnumerable<MenuItem> FilderMenu(Func<MenuItem, bool> expression)
