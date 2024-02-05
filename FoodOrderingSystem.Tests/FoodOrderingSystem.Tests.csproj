@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\FoodOrderingSystem.Core.csproj" />
+    <ProjectReference Include="..\FoodOrderingSystem.Core\FoodOrderingSystem.Core.csproj" />
   </ItemGroup>
 
 </Project>
